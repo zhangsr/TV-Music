@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/notify_album_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp" />
+
+    <LinearLayout
+        android:id="@+id/notify_song_info"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/notify_album_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/trackname"
+            style="@android:style/TextAppearance.StatusBar.EventContent.Title"
+            android:focusable="true"
+            android:singleLine="true"
+            android:layout_gravity="left"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/artistalbum"
+            style="@android:style/TextAppearance.StatusBar.EventContent"
+            android:textSize="12sp"
+            android:layout_gravity="left"
+            android:maxLines="2"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notify_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/notify_song_info"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/notify_prev_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle" />
+
+        <ImageButton
+            android:id="@+id/notify_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/notify_pause" />
+
+        <ImageButton
+            android:id="@+id/notify_next_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle" />
+
+        <ImageButton
+            android:id="@+id/notify_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+</RelativeLayout>
